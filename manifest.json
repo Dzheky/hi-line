@@ -1,0 +1,24 @@
+{
+    "name": "Hi Line",
+    "version": "0.1",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Hi Line",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab",
+        "contextMenus"
+    ]
+}

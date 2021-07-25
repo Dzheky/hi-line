@@ -1,0 +1,15 @@
+body {
+    min-width: 150px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#highlight-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.highlight-item {
+    display: block;
+}
