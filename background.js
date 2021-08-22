@@ -21,9 +21,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         chrome.storage.sync.get('highlights', storage => {
             storage.highlights.push({
                 url: tab.url,
+                time: (new Date()).toString(),
                 selection: info.selectionText,
             })
-            console.log(storage.highlights)
             chrome.storage.sync.set({ highlights: storage.highlights })
         })
     }

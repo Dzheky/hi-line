@@ -1,15 +1,124 @@
+* {
+    /*Colors*/
+    --color-background: #fff;
+    --color-black: #000;
+    --color-red: #ed8687;
+    --color-orange: #fdb29b;
+    --color-yellow: #ffd09c;
+    --color-blue: #cbdee4;
+    --color-green: #bed3c4;
+
+    /*Fonts*/
+    --font-lato: 'Lato', sans-serif;
+    --font-monsterrat: 'Montserrat', sans-serif;
+}
+
 body {
-    min-width: 150px;
-    padding-left: 5px;
-    padding-right: 5px;
+    min-width: 250px;
+    font-family: var(--font-lato);
+    margin: 0;
+}
+
+#logo-container {
+    padding: 8px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    height: 35px;
+}
+
+#logo {
+    width: 35px;
+    height: auto;
+}
+
+#highlight-list-title {
+    font-size: 13px;
+    padding: 8px;
+    background-color: var(--color-red);
+    color: var(--color-background);
+    font-family: var(--font-monsterrat);
 }
 
 #highlight-list {
+    max-height: 350px;
+    overflow: scroll;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+}
+
+.highlight-item-header-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+time {
+    display: block;
+    font-size: 10px;
+}
+
+#highlight-list-no-item {
+    font-family: var(--font-monsterrat);
+    font-size: 13px;
+    padding: 8px;
+}
+
+.highlight-item-title {
+    font-size: 13px;
+    display: block;
+    padding-bottom: 4px;
+    color: var(--color-red);
+    font-family: var(--font-monsterrat);
 }
 
 .highlight-item {
-    display: block;
+    padding: 8px;
+    border-bottom: var(--color-green) 1px solid;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+    width: 100%;
+    height: 20px;
+    background-color: var(--color-green);
+    font-family: var(--font-monsterrat);
+}
+
+#github-link {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-gap: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.highlight-item-highlight {
+    padding-bottom: 8px;
+}
+
+button {
+    padding: 2px 8px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: var(--font-monsterrat);
+    outline: none;
+    border: var(--color-orange) 1px solid;
+    color: var(--color-background);
+    background-color: var(--color-orange);
+}
+
+button:focus {
+    color: var(--color-orange);
+    background-color: var(--color-background);
+    outline: none;
+}
+
+#github-link > img {
+    width: 15px;
 }

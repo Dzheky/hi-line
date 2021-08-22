@@ -3,13 +3,24 @@
 
 <head>
     <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h3>Hi Line</p>
-        <div id="highlight-list"></div>
+    <div id="logo-container">
+        <img id="logo" src="./assets/logo.png" alt="Hi-line logo" />
+    </div>
+    <div id="highlight-list-title">List of your highlights:</div>
+    <div id="highlight-list"></div>
+
+    <footer>
+        <a id="github-link" href="https://github.com/Dzheky/hi-line" target="_blank">GitHub <img src="assets/github.png" /></a>
+    </footer>
 </body>
 
+<script src="utils.js"></script>
 <script src="highlightList.js"></script>
 
 </html>
