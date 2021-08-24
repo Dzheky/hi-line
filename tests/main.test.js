@@ -1,4 +1,6 @@
-const { retrieveWebsiteNameFromUrl } = require('./utils.js')
+// Created by Evgeny
+
+const { retrieveWebsiteNameFromUrl } = require('../utils.js')
 
 describe('retrieveWebsiteNameFromUrl function', () => {
     it('Should return correct host of the url', () => {
