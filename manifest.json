@@ -5,6 +5,19 @@
     "background": {
         "service_worker": "background.js"
     },
+    "content_scripts": [
+        {
+            "matches" : [
+                "<all_urls>"
+            ],
+            "js" : [
+                "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+                "highlightText.js",
+                "highlightList.js",
+                "content.js"
+            ]
+        }
+    ],
     "action": {
         "default_title": "Hi Line",
         "default_icon": "assets/icon.png",
@@ -21,4 +34,5 @@
         "activeTab",
         "contextMenus"
     ]
+    
 }

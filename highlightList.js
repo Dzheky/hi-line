@@ -1,13 +1,12 @@
-let highlightList = document.getElementById("highlight-list")
-
 const rerender = (highlights) => {
-    if (highlights.length) {
+    let highlightList = document.getElementById("highlight-list")
+
+    if (highlights && highlights.length) {
         highlightList.innerHTML = highlights.map((highlight, id) => {
-            console.error(JSON.stringify(highlight))
             return `
 <div class="highlight-item" id="${id}">
     <div class="highlight-item-header-container">
-        <a class="highlight-item-title" target="_blank" href="${highlight.url}">${retrieveWebsiteNameFromUrl(highlight.url)}</a>
+        <a class="highlight-item-title" target="_blank" href="${highlight.url}">${highlight.title}</a>
         <time>${new Intl.DateTimeFormat('en-US').format(new Date(highlight.time))}</time>
     </div>
     <div class="highlight-item-highlight">${highlight.selection}</div>
@@ -20,11 +19,13 @@ const rerender = (highlights) => {
     }
 }
 
-chrome.storage.sync.get("highlights", ({ highlights }) => {
-    rerender(highlights)
-})
+
 
 document.addEventListener('DOMContentLoaded', function() {
+    chrome.storage.sync.get("highlights", ({ highlights }) => {
+        rerender(highlights)
+    })
+
     document.getElementById('highlight-list').addEventListener('click', (e) => {
         if (e.target.className === 'highlight-item-button') {
             chrome.storage.sync.get("highlights", ({ highlights }) => {
@@ -35,3 +36,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 });
+
+

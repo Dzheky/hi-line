@@ -1,0 +1,23 @@
+{
+  "name": "hi-line",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dzheky/hi-line.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dzheky/hi-line/issues"
+  },
+  "homepage": "https://github.com/Dzheky/hi-line#readme",
+  "dependencies": {
+    "@webcomponents/custom-elements": "^1.5.0"
+  }
+}
