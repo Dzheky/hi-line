@@ -7,7 +7,7 @@
 ### 1. Install:
 
 1.0. "git clone https://github.com/Dzheky/hi-line.git"  
-1.1. Install NPM on your machine - "npm init" (this commands installs node_modules and creates package.json)  
+1.1. Install NPM on your machine - "npm init" (this command installs node_modules and creates package.json)  
 1.2. Install Sinon-Chrome on your machine - "npm install sinon-chrome --save-dev" - "https://stackoverflow.com/questions/2869827/how-to-test-chrome-extensions"  
 1.3. Install Mocha on your machine - "npm install --save-dev mocha"  
 1.4. Install Chai on your machine - "npm install --save-dev chai"  
@@ -24,7 +24,7 @@
 2.2. Move main.test.js file into tests folder  
 2.3. Change "require('./utils.js')" at line 1 in main.test.js into "require('../utils.js')"  
 2.4. Download May's hi-line-main_with_testing.zip on slack  
-2.5. Copy four files inside tests folder of hi-line-main_with_testing and paste them into your tests folder  
+2.5. Copy four files inside the tests folder of hi-line-main_with_testing and paste them into your tests folder  
 2.6. Add the code below to your package.json file  
 
 "scripts": {  
